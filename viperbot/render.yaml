@@ -1,0 +1,22 @@
+services:
+  - type: web
+    name: viperbot
+    runtime: node
+    plan: free
+    buildCommand: npm install
+    startCommand: node server.js
+    envVars:
+      - key: NODE_ENV
+        value: production
+      - key: DISCORD_BOT_TOKEN
+        sync: false
+      - key: YOUTUBE_COOKIE
+        sync: false
+      - key: SPOTIFY_CLIENT_ID
+        sync: false
+      - key: SPOTIFY_CLIENT_SECRET
+        sync: false
+      - key: BOT_OWNER_IDS
+        sync: false
+      - key: ALLOWED_CHANNEL_ID
+        sync: false
